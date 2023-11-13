@@ -7,8 +7,11 @@ const __dirname = dirname(__filename);
 let parsedDir = path.parse(__dirname).base
 
 import connectionInfo from '../schema/database.config.js'
+
 let deleteImage =(req,res)=>{
     let book_id = req.params.book_id
+    
+
     let deleteImage = `DELETE FROM booktable WHERE book_id=${book_id}`;
     let getBookName = `SELECT book_title FROM booktable WHERE book_id=${book_id}`
     connectionInfo.query(getBookName,(err,data,field)=>{

@@ -59,6 +59,8 @@ if(response){
         <input type="file" onChange={handleChange} accept='application/pdf' name='book_file'/>
         <button type='submit'>upload</button>
       </form>
+      <br />
+      <Link to='/home'> Home Page</Link>
     </div>
   )
 }
